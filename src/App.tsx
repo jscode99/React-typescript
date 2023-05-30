@@ -1,24 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Greet from "./components/Greet";
+import Person from "./components/Person";
+import "./App.css";
+import PersonList from "./components/PersonList";
+import Status from "./components/Status";
+import Heading from "./components/Heading";
+import Oscar from "./components/Oscar";
+import Button from "./components/Button";
+import InputElement from "./components/InputElement";
+import Container from "./components/Container";
 
-function App() {
+function App(): JSX.Element {
+  const personName = {
+    first: "Jishnu",
+    last: "Satheesh",
+  };
+  const personList = [
+    { first: "Jishnu", last: "Satheesh" },
+    { first: "Jishnu", last: "Satheesh" },
+    { first: "Jishnu", last: "Satheesh" },
+    { first: "Jishnu", last: "Satheesh" },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Primitive types */}
+      {/* <Greet name={`Jishnu`} messageCount={10} isLoggedIn={false} /> */}
+      {/* Optional props in type (meassageCount) */}
+      <Greet name={`Jishnu`} isLoggedIn={false} />
+      {/* Object type */}
+      <Person name={personName} />
+      {/* Array type */}
+      <PersonList nameList={personList} />
+      {/* Union type */}
+      <Status status="loading" />
+      {/* Children as React node element type */}
+      <Oscar>
+        {/* Children as string */}
+        <Heading>Heading children</Heading>
+      </Oscar>
+      {/* Event Types */}
+      <Button handleClick={(e, id) => console.log("Clicked", e, id)} />
+      <InputElement value="" handleChange={(e) => console.log(e)} />
+      {/* Style props */}
+      <Container style={{ padding: "10px", textAlign: "center" }}>
+        Text content goes here
+      </Container>
     </div>
   );
 }
