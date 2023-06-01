@@ -12,6 +12,7 @@ import Button from "./components/Button";
 import InputElement from "./components/InputElement";
 import Container from "./components/Container";
 import "./App.css";
+import LoggedIn from "./components/state/LoggedIn";
 
 function App(): JSX.Element {
   const personName = {
@@ -50,6 +51,8 @@ function App(): JSX.Element {
           <Container style={{ padding: "10px", textAlign: "center" }}>
             Text content goes here
           </Container>
+          {/* UseContext future & default */}
+          <LoggedIn />
         </div>
       </UserProvider>
     </ThemeProvider>
