@@ -11,8 +11,13 @@ import Oscar from "./components/Oscar";
 import Button from "./components/Button";
 import InputElement from "./components/InputElement";
 import Container from "./components/Container";
-import "./App.css";
 import LoggedIn from "./components/state/LoggedIn";
+import DomRef from "./components/ref/DomRef";
+
+import "./App.css";
+import MutableRef from "./components/ref/MutableRef";
+import List from "./components/generics/List";
+import RandomNumber from "./components/restriction/RandomNumber";
 
 function App(): JSX.Element {
   const personName = {
@@ -53,6 +58,23 @@ function App(): JSX.Element {
           </Container>
           {/* UseContext future & default */}
           <LoggedIn />
+          {/* UseRef Dom reference */}
+          <DomRef />
+          {/* useRef Mutable reference */}
+          <MutableRef />
+          {/* Generic Props */}
+          {/* <List items={["1", "2", "3"]} onClick={(item) => console.log(item)} />
+          <List items={[1, 2, 3]} onClick={(item) => console.log(item)} /> */}
+          <List
+            items={[
+              { id: 1, first: "jishnu", last: "satheesh" },
+              { id: 2, first: "jishnu", last: "satheesh" },
+              { id: "3", first: "jishnu", last: "satheesh" },
+            ]}
+            onClick={(item) => console.log(item)}
+          />
+          {/* Restriction */}
+          <RandomNumber value={1} isPositive />
         </div>
       </UserProvider>
     </ThemeProvider>
