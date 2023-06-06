@@ -18,6 +18,7 @@ import "./App.css";
 import MutableRef from "./components/ref/MutableRef";
 import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
+import Toast from "./components/templateLiterals/Toast";
 
 function App(): JSX.Element {
   const personName = {
@@ -75,6 +76,8 @@ function App(): JSX.Element {
           />
           {/* Restriction */}
           <RandomNumber value={1} isPositive />
+          {/* Template Literals */}
+          <Toast position="center" />
         </div>
       </UserProvider>
     </ThemeProvider>
