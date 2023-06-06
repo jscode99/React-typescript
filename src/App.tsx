@@ -13,12 +13,14 @@ import InputElement from "./components/InputElement";
 import Container from "./components/Container";
 import LoggedIn from "./components/state/LoggedIn";
 import DomRef from "./components/ref/DomRef";
-
-import "./App.css";
 import MutableRef from "./components/ref/MutableRef";
 import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateLiterals/Toast";
+import CustomButton from "./components/html/Button";
+
+import "./App.css";
+import CustomInput from "./components/html/Input";
 
 function App(): JSX.Element {
   const personName = {
@@ -78,6 +80,11 @@ function App(): JSX.Element {
           <RandomNumber value={1} isPositive />
           {/* Template Literals */}
           <Toast position="center" />
+          {/* Wrapping Html Element */}
+          <CustomButton variant="primary" onClick={(e) => console.log(e)}>
+            Click Me
+          </CustomButton>
+          <CustomInput />
         </div>
       </UserProvider>
     </ThemeProvider>
