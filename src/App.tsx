@@ -86,7 +86,7 @@ function App(): JSX.Element {
             Click Me
           </CustomButton>
           <CustomInput />
-          {/* Extract props from other components */}
+          {/* Extract props types from other components */}
           <CustomComponent name="jishnu" />
         </div>
       </UserProvider>
