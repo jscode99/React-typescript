@@ -21,6 +21,7 @@ import CustomButton from "./components/html/Button";
 
 import "./App.css";
 import CustomInput from "./components/html/Input";
+import CustomComponent from "./components/ExtractProps/CustomComponent";
 
 function App(): JSX.Element {
   const personName = {
@@ -85,6 +86,8 @@ function App(): JSX.Element {
             Click Me
           </CustomButton>
           <CustomInput />
+          {/* Extract props from other components */}
+          <CustomComponent name="jishnu" />
         </div>
       </UserProvider>
     </ThemeProvider>

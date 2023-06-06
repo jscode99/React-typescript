@@ -2,7 +2,7 @@ type GreetProps = {
   name: string;
   //* Optional props
   messageCount?: number;
-  isLoggedIn: boolean;
+  isLoggedIn?: boolean;
 };
 
 export default function Greet(props: GreetProps): JSX.Element {
