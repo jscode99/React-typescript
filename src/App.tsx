@@ -22,6 +22,7 @@ import CustomButton from "./components/html/Button";
 import "./App.css";
 import CustomInput from "./components/html/Input";
 import CustomComponent from "./components/ExtractProps/CustomComponent";
+import Text from "./components/polymorphic/Text";
 
 function App(): JSX.Element {
   const personName = {
@@ -88,6 +89,16 @@ function App(): JSX.Element {
           <CustomInput />
           {/* Extract props types from other components */}
           <CustomComponent name="jishnu" />
+          {/* Polymorphic component */}
+          <Text as={"h1"} size="lg">
+            Heading
+          </Text>
+          <Text as={"p"} size="sm">
+            Paragraph
+          </Text>
+          <Text as={"label"} size="md" color="primary" htmlFor="id11">
+            Label
+          </Text>
         </div>
       </UserProvider>
     </ThemeProvider>
